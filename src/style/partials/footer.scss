@@ -1,0 +1,144 @@
+﻿.page_footer {
+	margin-top: 80px;
+	position: relative;
+}
+
+.page_footer_content {
+	position: relative;
+	display: flex;
+	align-content: stretch;
+	flex-wrap: wrap;
+	text-align: left;
+
+	h3 {
+		font-family: $font-bold;
+		font-size: 14px;
+		line-height: 23px;
+		color: #3974ca;
+		text-transform: uppercase;
+		white-space: nowrap;
+	}
+
+	p {
+		font-family: $font-regular;
+		font-size: 15px;
+		line-height: 22px;
+		white-space: pre-line;
+		color: #323232;
+		margin-top: -20px;
+
+		a {
+			text-decoration: none;
+			color: #3974ca;
+		}
+	}
+}
+
+.page_footer_content ul {
+	list-style-type: none;
+	margin-left: -40px;
+	margin-top: 25px;
+
+	li {
+		display: inline-block;
+		margin-right: 20px;
+
+		a {
+			text-decoration: none;
+
+			img {
+				width: 100%;
+				height: 100%;
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+.page_footer_content_shakerfactory {
+	margin-right: 60px;
+}
+
+.page_footer_content_contacts {
+	margin-right: 80px;
+}
+
+.page_footer_content iframe {
+	align-self: flex-end;
+	margin-top: 225px;
+	margin-left: -908px;
+	overflow: visible;
+}
+
+.page_footer_content small {
+	font-family: $font-regular;
+	color: #323232;
+	align-self: flex-end;
+	font-size: 14px;
+	line-height: 22px;
+	margin-bottom: 25px;
+	margin-left: -105px;
+}
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 992px) {
+	.page_footer {
+		margin-top: 50px;
+	}
+
+	.page_footer_content {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+	}
+
+	.page_footer_content_shakerfactory {
+		margin-right: 0px;
+	}
+
+	.page_footer_content_contacts {
+		margin-right: 0px;
+	}
+
+	.page_footer_content ul {
+		margin-left: -20px;
+	}
+
+	.page_footer_content iframe {
+		margin-top: 50px;
+		margin-left: 0px;
+		align-self: initial;
+	}
+
+	.page_footer_content small {
+		align-self: initial;
+		margin-left: 0px;
+		text-align: left;
+	}
+}
+
+@media screen and (min-width: 993px) and (max-width: 1440px) {
+	.page_footer_content_shakerfactory {
+		margin-left: 50px;
+	}
+
+	.page_footer_content iframe {
+		margin-top: 50px;
+		margin-left: 50px;
+	}
+
+	.page_footer_content small {
+		margin-left: -50px;
+	}
+}
+
+// QUERIES ONLY FOR IE 10+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.page_footer_content iframe {
+		align-self: flex-end;
+		margin-top: 225px;
+		margin-left: -850px;
+	}
+}

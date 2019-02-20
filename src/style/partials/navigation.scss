@@ -1,0 +1,343 @@
+﻿.navigation {
+	position: relative;
+	background: #353f45;
+
+	.navigation_inner {
+		margin-top: 35px;
+		overflow-x: visible !important;
+	}
+}
+
+.navigation_wrap {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	background: #353f45;
+
+	@include web-alias;
+}
+
+.main_navigation {
+	position: relative;
+
+	.navigation_listing {
+		list-style-type: none;
+		box-sizing: border-box;
+		position: relative;
+
+		.navigation_item {
+			display: inline-block;
+			font-size: 14px;
+			line-height: 21px;
+			font-family: $font-bold;
+			text-transform: uppercase;
+			color: #fff;
+			box-sizing: border-box;
+			padding: 18px 0;
+			position: relative;
+			cursor: pointer;
+			border-top: 3px solid transparent;
+			border-bottom: 3px solid transparent;
+
+			&:hover,
+			&:focus {
+				border-top: 3px solid #b2d12d;
+				border-bottom: 3px solid #b2d12d;
+				transition: .3s linear;
+			}
+
+			a {
+				text-decoration: none;
+				color: inherit;
+				border-right: 1px solid rgba(255, 255, 255, 0.2);
+				padding: 0 42px;
+				position: relative;
+				z-index: 9999;
+			}
+
+			a.last_item {
+				border-right: none;
+			}
+		}
+
+		.overlay {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.1;
+			display: none;
+			transition: .3s linear;
+			background-color: #b2d12d;
+		}
+	}
+}
+
+.navigation_item:hover .overlay,
+.navigation_item:focus .overlay {
+	display: block;
+}
+
+.main_navigation .navigation_listing .navigation_item .subnav {
+	position: absolute;
+	list-style-type: none;
+	padding: 0 20px;
+	background-color: #353f45;
+	margin-top: -1px;
+	top: 60px;
+	min-width: 270px;
+	z-index: 9998;
+	display: none;
+	box-sizing: border-box;
+
+	.subnav_item {
+		display: block;
+		padding-top: 5px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		position: relative;
+		text-transform: initial;
+
+		a {
+			position: relative;
+			display: block;
+			text-decoration: none;
+			color: $text-regular;
+			font-family: $font-regular;
+			padding: 10px 0;
+			transition: 0.3s linear;
+			border-right: none;
+
+			&:hover,
+			&:focus {
+				color: #b2d12d;
+			}
+		}
+	}
+
+	.last_subnav_item {
+		border-bottom: none;
+	}
+}
+
+.main_navigation .navigation_listing .navigation_item:hover .subnav,
+.main_navigation .navigation_listing .navigation_item:focus .subnav {
+	display: block;
+}
+
+.submit_navigation.btn {
+	@include btn;
+}
+
+/* BURGER MENU ON TOGGLE TRANSFORM CLASSES */
+
+.mobile_menu_btn {
+	display: none;
+	text-align: center;
+	position: relative;
+	cursor: pointer;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.burger_menu {
+	display: inline-block;
+	width: auto;
+	margin: 0 auto;
+	-webkit-transition: all .7s ease;
+	-moz-transition: all .7s ease;
+	-ms-transition: all .7s ease;
+	-o-transition: all .7s ease;
+	transition: all .7s ease;
+}
+
+.middle {
+	margin: 0 auto;
+}
+
+.bar {
+	display: block;
+	height: 3px;
+	width: 30px;
+	background: #fff;
+	margin: 5px auto;
+}
+
+.transformFirstBar {
+	-webkit-transform: translateY(8px) rotateZ(45deg);
+	-moz-transform: translateY(8px) rotateZ(45deg);
+	-ms-transform: translateY(8px) rotateZ(45deg);
+	-o-transform: translateY(8px) rotateZ(45deg);
+	transform: translateY(8px) rotateZ(45deg);
+	-webkit-transition: all .7s ease;
+	-moz-transition: all .7s ease;
+	-ms-transition: all .7s ease;
+	-o-transition: all .7s ease;
+	transition: all .7s ease;
+	background-color: #fff;
+}
+
+.transformSecondBar {
+	width: 0;
+	background-color: #fff;
+	-webkit-transition: all .7s ease;
+	-moz-transition: all .7s ease;
+	-ms-transition: all .7s ease;
+	-o-transition: all .7s ease;
+	transition: all .7s ease;
+}
+
+.transformThirdBar {
+	-webkit-transform: translateY(-8px) rotateZ(-45deg);
+	-moz-transform: translateY(-8px) rotateZ(-45deg);
+	-ms-transform: translateY(-8px) rotateZ(-45deg);
+	-o-transform: translateY(-8px) rotateZ(-45deg);
+	transform: translateY(-8px) rotateZ(-45deg);
+	-webkit-transition: all .7s ease;
+	-moz-transition: all .7s ease;
+	-ms-transition: all .7s ease;
+	-o-transition: all .7s ease;
+	transition: all .7s ease;
+	background-color: #fff;
+}
+
+.changeBg {
+	background: #b1d30b;
+}
+
+.increaseHeight {
+	padding-bottom: 20px;
+}
+
+// MEDIA QUERIES
+
+// 0 - 768
+
+@media screen and (max-width: 768px) {
+	.navigation_wrap {
+		justify-content: initial;
+		flex-direction: column;
+	}
+
+	.mobile_menu_btn {
+		display: block;
+	}
+
+	.main_navigation {
+		display: none;
+		margin-bottom: 20px;
+		margin-left: 15px;
+	}
+
+	.submit_navigation.btn {
+		display: none;
+		min-height: 60px;
+		padding: 0 82px;
+		margin: auto;
+		background: #b2d12d;
+	}
+
+	.main_navigation .navigation_listing {
+		.navigation_item {
+			display: block;
+			padding: 18px 0;
+			border-top: none;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+			max-width: 95%;
+
+			&:hover,
+			&:focus {
+				border-top: none;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+				transition: .3s linear;
+				color: #b2d12d;
+			}
+
+			a {
+				color: inherit;
+				border-right: none;
+				padding: 0 0px;
+				z-index: 9999;
+			}
+		}
+	}
+
+	.navigation_item:hover .overlay,
+	.navigation_item:focus .overlay {
+		display: none;
+	}
+
+	.main_navigation .navigation_listing .navigation_item .subnav {
+		z-index: 10000;
+		min-width: 100%;
+		background-color: #283136;
+		padding: 0 0px;
+
+		.subnav_item {
+			a {
+				padding: 10px 15px;
+			}
+		}
+	}
+}
+
+// 769 - 992
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+	.navigation_wrap {
+		justify-content: space-around;
+	}
+
+	.main_navigation {
+		.navigation_listing {
+			.navigation_item {
+				font-size: 12px;
+				line-height: 18px;
+
+				a {
+					padding: 0 15px;
+				}
+
+				.subnav {
+					margin-top: -3px;
+				}
+			}
+		}
+	}
+
+	.submit_navigation.btn {
+		font-size: 12px;
+		line-height: 18px;
+	}
+}
+
+// 993 - 1199
+
+@media screen and (min-width: 993px) and (max-width: 1199px) {
+	.navigation_wrap {
+		justify-content: space-around;
+	}
+
+	.main_navigation {
+		.navigation_listing {
+			.navigation_item {
+				font-size: 14px;
+				line-height: 21px;
+
+				a {
+					padding: 0 20px;
+				}
+
+				.subnav {
+					margin-top: -3px;
+				}
+			}
+		}
+	}
+
+	.submit_navigation.btn {
+		font-size: 14px;
+		line-height: 21px;
+	}
+}

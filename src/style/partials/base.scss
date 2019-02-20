@@ -1,0 +1,111 @@
+// fonts
+
+@font-face {
+	font-family: "Lato-Regular";
+	src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Lato-Bold";
+	src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Lato-Light";
+	src: url("../fonts/Lato/Lato-Light.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Lato-Italic";
+	src: url("../fonts/Lato/Lato-Italic.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "DINCondensed-Bold";
+	src: url("../fonts/DINCondensed/DINCondensed-Bold.ttf") format("truetype");
+}
+
+// fonts
+
+$font-regular: "Lato-Regular", Arial, sans-serif;
+$font-bold: "Lato-Bold", Arial, sans-serif;
+$font-light: "Lato-Light", Arial, sans-serif;
+$font-italic: "Lato-Italic", Arial, sans-serif;
+$font-dc-bold: "DINCondensed-Bold", sans-serif;
+
+// colors
+$text-regular: #808080;
+$text-title: #000;
+$btn-color: #f26c1c;
+
+// mixins
+
+@mixin web-alias { // text smoothness hack
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin btn {
+	padding: 0 24px;
+	border: none;
+	white-space: nowrap;
+	display: inline-block;
+	max-width: 100%;
+	text-transform: uppercase;
+	overflow: visible;
+	font-family: $font-bold;
+	font-size: 16px;
+	line-height: 21px;
+	color: #fff;
+	background: $btn-color;
+	-webkit-tap-highlight-color: transparent;
+
+	&:hover,
+	&focus {
+		opacity: 0.7;
+		transition: .4s ease;
+		background: darken($btn-color, 5%);
+	}
+}
+
+// Classes
+
+body {
+	font-family: 'Lato-Regular', 'Lato-Bold', 'Lato-Light', 'Lato-Italic', 'DINCondensed-Bold', sans-serif;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	color: #808080;
+	font-size: 14px;
+	line-height: normal;
+	-webkit-text-size-adjust: 100%;
+}
+
+.container {
+	width: 1170px;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		width: 100%;
+		margin: 0 auto;
+		max-width: 100%;
+	}
+}
+
+@media screen and (min-width: 993px) and (max-width: 1199px) {
+	.container {
+		width: 100%;
+		margin: 0 auto;
+		max-width: 960px;
+	}
+}

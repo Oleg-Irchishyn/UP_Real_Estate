@@ -1,0 +1,29 @@
+.popup-bg {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background-color: #828286;
+	background-color: rgba(#828286, 0.5);
+	z-index: 99;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	cursor: pointer;
+
+	.popup {
+		background-color: #fff;
+		color: #000;
+		max-width: 100%;
+		max-width: calc(100% - 40px);
+		max-height: 80vh;
+		width: 750px;
+		cursor: default;
+		display: none;
+		border-radius: 3px;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+}

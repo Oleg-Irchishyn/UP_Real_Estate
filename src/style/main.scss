@@ -1,0 +1,58 @@
+// @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&subset=cyrillic'
+
+@import "vendor/reset";
+@import "vendor/normalize";
+@import "partials/base";
+@import "partials/popups";
+@import "partials/extra_header";
+@import "partials/header";
+@import "partials/navigation";
+@import "partials/banner";
+@import "partials/latest_properties";
+@import "partials/footer";
+
+.uk {
+	.flag {
+		background-image: url("../img/content/flags.png");
+	}
+
+	.dropdown {
+		background: url("../img/ui/dropdown_arrow.png") no-repeat center;
+	}
+}
+
+.fr {
+	.flag {
+		background-image: url("../img/content/flags.png");
+	}
+}
+
+.de {
+	.flag {
+		background-image: url("../img/content/flags.png");
+	}
+}
+
+.currency_select li .dropdown {
+	background: url("../img/ui/dropdown_arrow.png") no-repeat center;
+}
+
+.banner {
+	background: url("../img/content/banner_bg.jpg") no-repeat center;
+}
+
+.main_filter_form_wrap .main_filter_form_select {
+	background: url("../img/ui/dropdown_img.png") no-repeat 99.8% #fff;
+}
+
+.bed {
+	background: url("../img/content/icons.png") 0 0;
+}
+
+.bath {
+	background: url("../img/content/icons.png") -39px 0;
+}
+
+.corner {
+	background: url("../img/content/icons.png") -78px 0;
+}
