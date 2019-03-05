@@ -1,0 +1,271 @@
+﻿.features_gallery_wrap {
+	position: relative;
+}
+
+.features_gallery_title {
+	text-align: center;
+	margin-top: 65px;
+	margin-bottom: 24px;
+	font-size: 36px;
+	color: $text-title;
+	font-family: $font-bold;
+	text-align: center;
+	font-weight: normal;
+}
+
+.features_gallery_container_title {
+	text-align: center;
+	font-family: $font-regular;
+	font-weight: normal;
+	color: $text-regular;
+	line-height: 1.35;
+	font-size: 15px;
+	margin-bottom: 45px;
+}
+
+.features_gallery_container {
+	display: flex;
+	align-content: stretch;
+}
+
+.main_features_item {
+	width: 495px;
+	margin-right: 20px;
+
+	div a {
+		text-decoration: none;
+
+		img {
+			width: 495px;
+			min-height: 430px;
+		}
+	}
+}
+
+.small_features_item_container {
+	display: flex;
+	position: relative;
+	flex-wrap: wrap;
+	align-content: stretch;
+	justify-content: space-between;
+
+	.small_features_item {
+		width: 205px;
+		min-height: 205px;
+		margin-bottom: 18px;
+
+		div a {
+			text-decoration: none;
+
+			img {
+				width: 205px;
+				min-height: 205px;
+			}
+		}
+	}
+}
+
+.small_features_item_container .small_features_item {
+	.icon_container {
+		width: 100%;
+		background-color: #b2d12d;
+		padding: 30px 0;
+	}
+
+	.title_box {
+		width: 100%;
+		background-color: #353f45;
+		padding-top: 8px;
+		padding-bottom: 11px;
+		text-align: center;
+
+		.top_title {
+			font-family: $font-dc-bold;
+			font-size: 20px;
+			display: block;
+			color: #fff;
+			text-transform: uppercase;
+			line-height: 22px;
+			letter-spacing: 1px;
+		}
+
+		.bottom_title {
+			color: #b2d12d;
+			font-family: $font-bold;
+			font-size: 16px;
+			line-height: 18px;
+			display: block;
+		}
+	}
+}
+
+// MEDIA QUERIES
+
+// 0 - 567
+
+@media screen and (max-width: 567px) {
+	.features_gallery_wrap {
+		position: relative;
+	}
+
+	.features_gallery_title {
+		font-size: 26px;
+	}
+
+	.features_gallery_container {
+		display: flex;
+		align-content: stretch;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.main_features_item {
+		width: 300px;
+		margin-right: 0px;
+		margin-bottom: 20px;
+
+		div a {
+			text-decoration: none;
+
+			img {
+				width: 300px;
+				min-height: 261px;
+				height: 261px;
+			}
+		}
+	}
+
+	.small_features_item_container {
+		display: flex;
+		position: relative;
+		flex-wrap: wrap;
+		align-content: stretch;
+		justify-content: space-evenly;
+
+		.small_features_item {
+			width: 150px;
+			min-height: 150px;
+			margin-bottom: 20px;
+
+			div a {
+				text-decoration: none;
+
+				img {
+					width: 150px;
+					min-height: 150px;
+					height: 150px;
+				}
+			}
+		}
+	}
+
+	.small_features_item_container .small_features_item {
+		.icon_container {
+			padding: 10px 0;
+		}
+
+		.title_box {
+			padding-top: 3px;
+			padding-bottom: 3px;
+
+			.top_title {
+				font-size: 16px;
+			}
+
+			.bottom_title {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+// 568 - 1199
+
+@media screen and (min-width: 568px) and (max-width: 1199px) {
+	.features_gallery_wrap {
+		position: relative;
+	}
+
+	.features_gallery_title {
+		font-size: 26px;
+	}
+
+	.features_gallery_container {
+		display: flex;
+		align-content: stretch;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.main_features_item {
+		width: 495px;
+		margin-right: 0px;
+		margin-bottom: 20px;
+
+		div a {
+			text-decoration: none;
+
+			img {
+				width: 495px;
+				min-height: 430px;
+			}
+		}
+	}
+
+	.small_features_item_container {
+		display: flex;
+		position: relative;
+		flex-wrap: wrap;
+		align-content: stretch;
+		justify-content: space-evenly;
+
+		.small_features_item {
+			width: 205px;
+			min-height: 205px;
+			margin-bottom: 18px;
+
+			div a {
+				text-decoration: none;
+
+				img {
+					width: 205px;
+					min-height: 205px;
+				}
+			}
+		}
+	}
+
+	.small_features_item_container .small_features_item {
+		.icon_container {
+			width: 100%;
+			background-color: #b2d12d;
+			padding: 30px 0;
+		}
+
+		.title_box {
+			width: 100%;
+			background-color: #353f45;
+			padding-top: 8px;
+			padding-bottom: 11px;
+			text-align: center;
+
+			.top_title {
+				font-family: $font-dc-bold;
+				font-size: 20px;
+				display: block;
+				color: #fff;
+				text-transform: uppercase;
+				line-height: 22px;
+				letter-spacing: 1px;
+			}
+
+			.bottom_title {
+				color: #b2d12d;
+				font-family: $font-bold;
+				font-size: 16px;
+				line-height: 18px;
+				display: block;
+			}
+		}
+	}
+}

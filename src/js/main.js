@@ -83,8 +83,8 @@ starFavicon.each(function (index) {
 
 // Carousels 
 
-$(document).ready(function () {
-  $('.latest_properties_carousel').slick({
+$('.carousel').each(function (index) {
+  $(this).slick({
     infinite: true,
     speed: 300,
     autoplay: true,
@@ -143,5 +143,9 @@ $(document).ready(function () {
       }
     ]
   });
+});
+
+$(window).on('resize orientationchange', function () {
+  $('.carousel').slick('resize');
 });
 

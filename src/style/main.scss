@@ -9,6 +9,9 @@
 @import "partials/navigation";
 @import "partials/banner";
 @import "partials/latest_properties";
+@import "partials/best_agents";
+@import "partials/hero_banner";
+@import "partials/features_gallery";
 @import "partials/footer";
 
 .uk {
@@ -55,4 +58,38 @@
 
 .corner {
 	background: url("../img/content/icons.png") -78px 0;
+}
+
+.hero_banner {
+	background: url("../img/content/hero_banner_bg.jpg") no-repeat center;
+}
+
+.small_features_item_container .small_features_item {
+	.icon_container {
+		a {
+			i.papers {
+				background: url("../img/content/inversed-icons-sprite.png") -218px -121px;
+				display: block;
+				width: 100px;
+				height: 85px;
+				margin: 0 auto;
+			}
+
+			i.home {
+				background: url("../img/content/inversed-icons-sprite.png") 0 -240px;
+				display: block;
+				width: 95px;
+				height: 85px;
+				margin: 0 auto;
+			}
+
+			i.human {
+				background: url("../img/content/inversed-icons-sprite.png") -367px -127px;
+				display: block;
+				width: 83px;
+				height: 85px;
+				margin: 0 auto;
+			}
+		}
+	}
 }

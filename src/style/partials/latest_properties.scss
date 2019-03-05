@@ -1,4 +1,24 @@
-﻿.latest_properties_wrap {
+﻿@keyframes movezoom {
+	from {
+		left: 0;
+	}
+
+	to {
+		left: 79px;
+	}
+}
+
+@keyframes movelink {
+	from {
+		left: 0;
+	}
+
+	to {
+		left: 138px;
+	}
+}
+
+.latest_properties_wrap {
 	position: relative;
 }
 
@@ -85,6 +105,7 @@
 	border-radius: 100%;
 	color: #fff;
 	display: none;
+	animation: movezoom .4s ease-in-out;
 
 	&:hover,
 	&:focus {
@@ -108,6 +129,7 @@
 	border-radius: 100%;
 	color: #fff;
 	display: none;
+	animation: movelink .4s ease-in-out;
 
 	&:hover,
 	&:focus {

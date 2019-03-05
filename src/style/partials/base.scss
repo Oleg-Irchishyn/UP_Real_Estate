@@ -80,12 +80,15 @@ body {
 	font-size: 14px;
 	line-height: normal;
 	-webkit-text-size-adjust: 100%;
+
+	@include web-alias;
 }
 
 .container {
 	width: 1170px;
 	margin: 0 auto;
 	max-width: 100%;
+	overflow-x: hidden;
 }
 
 .clearfix::after {
