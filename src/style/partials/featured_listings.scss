@@ -18,11 +18,11 @@
 	}
 }
 
-.latest_properties_wrap {
+.featured_listings_wrap {
 	position: relative;
 }
 
-.latest_properties_title {
+.featured_listings_title {
 	text-align: center;
 	margin-top: 65px;
 	margin-bottom: 24px;
@@ -33,7 +33,7 @@
 	font-weight: normal;
 }
 
-.latest_properties_carousel_title {
+.featured_listings_carousel_title {
 	text-align: center;
 	font-family: $font-regular;
 	font-weight: normal;
@@ -43,7 +43,7 @@
 	margin-bottom: 45px;
 }
 
-.latest_properties_carousel {
+.featured_listings_carousel {
 	position: relative;
 	width: 1170px !important;
 	margin: auto;
@@ -93,6 +93,20 @@
 			}
 		}
 	}
+}
+
+.preview .best_price {
+	display: none;
+	position: absolute;
+	top: 5px;
+	left: 9px;
+	padding: 6px 7px;
+	font-family: $font-regular;
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 20px;
+	color: #fff;
+	background: #1ad1d0;
 }
 
 .preview .zoom {
@@ -282,16 +296,16 @@
 
 /* slick slider parent*/
 
-.latest_properties_wrap .slick-list {
+.featured_listings_wrap .slick-list {
 	margin: 0 -10px;
 }
 
-.latest_properties_wrap .slick-slide {
+.featured_listings_wrap .slick-slide {
 	margin: 0 15px;
 	width: 266px !important;
 }
 
-.latest_properties_carousel .prev.slick-arrow {
+.featured_listings_carousel .prev.slick-arrow {
 	background: #f26c1c;
 	height: 30px;
 	width: 30px;
@@ -308,7 +322,7 @@
 	}
 }
 
-.latest_properties_carousel .next.slick-arrow {
+.featured_listings_carousel .next.slick-arrow {
 	height: 30px;
 	width: 30px;
 	background: #f26c1c;
@@ -346,17 +360,17 @@
 // 0 - 768
 
 @media screen and (max-width: 768px) {
-	.latest_properties_wrap {
+	.featured_listings_wrap {
 		position: relative;
 	}
 
-	.latest_properties_title {
+	.featured_listings_title {
 		margin-top: 50px;
 		margin-bottom: 24px;
 		font-size: 26px;
 	}
 
-	.latest_properties_carousel {
+	.featured_listings_carousel {
 		position: relative;
 		width: 320px !important;
 
@@ -366,7 +380,7 @@
 		}
 	}
 
-	.latest_properties_carousel .carousel_item {
+	.featured_listings_carousel .carousel_item {
 		.preview {
 			.like i {
 				color: $btn-color;
@@ -374,19 +388,23 @@
 		}
 	}
 
+	.preview .best_price {
+		display: inline-block;
+	}
+
 	/* slick slider parent*/
 
-	.latest_properties_wrap .slick-slide {
+	.featured_listings_wrap .slick-slide {
 		margin: 0 35px;
 		width: 266px !important;
 	}
 
-	.latest_properties_carousel .prev.slick-arrow {
+	.featured_listings_carousel .prev.slick-arrow {
 		top: -70px;
 		left: 21%;
 	}
 
-	.latest_properties_carousel .next.slick-arrow {
+	.featured_listings_carousel .next.slick-arrow {
 		top: -70px;
 		right: 21%;
 	}
@@ -395,17 +413,17 @@
 // 769 - 992
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
-	.latest_properties_wrap {
+	.featured_listings_wrap {
 		position: relative;
 	}
 
-	.latest_properties_title {
+	.featured_listings_title {
 		margin-top: 50px;
 		margin-bottom: 24px;
 		font-size: 26px;
 	}
 
-	.latest_properties_carousel {
+	.featured_listings_carousel {
 		position: relative;
 		width: 572px !important;
 
@@ -415,7 +433,7 @@
 		}
 	}
 
-	.latest_properties_carousel .carousel_item {
+	.featured_listings_carousel .carousel_item {
 		.preview {
 			.like i {
 				color: $btn-color;
@@ -423,19 +441,23 @@
 		}
 	}
 
+	.preview .best_price {
+		display: inline-block;
+	}
+
 	/* slick slider parent*/
 
-	.latest_properties_wrap .slick-slide {
+	.featured_listings_wrap .slick-slide {
 		margin: 0 15px;
 		width: 266px !important;
 	}
 
-	.latest_properties_carousel .prev.slick-arrow {
+	.featured_listings_carousel .prev.slick-arrow {
 		top: -70px;
 		left: 31%;
 	}
 
-	.latest_properties_carousel .next.slick-arrow {
+	.featured_listings_carousel .next.slick-arrow {
 		top: -70px;
 		right: 31%;
 	}
@@ -444,17 +466,17 @@
 // 993 - 1199
 
 @media screen and (min-width: 993px) and (max-width: 1199px) {
-	.latest_properties_wrap {
+	.featured_listings_wrap {
 		position: relative;
 	}
 
-	.latest_properties_title {
+	.featured_listings_title {
 		margin-top: 50px;
 		margin-bottom: 24px;
 		font-size: 26px;
 	}
 
-	.latest_properties_carousel {
+	.featured_listings_carousel {
 		position: relative;
 		width: 900px !important;
 
@@ -464,7 +486,7 @@
 		}
 	}
 
-	.latest_properties_carousel .carousel_item {
+	.featured_listings_carousel .carousel_item {
 		.preview {
 			.like i {
 				color: $btn-color;
@@ -472,19 +494,23 @@
 		}
 	}
 
+	.preview .best_price {
+		display: inline-block;
+	}
+
 	/* slick slider parent*/
 
-	.latest_properties_wrap .slick-slide {
+	.featured_listings_wrap .slick-slide {
 		margin: 0 20px;
 		width: 266px !important;
 	}
 
-	.latest_properties_carousel .prev.slick-arrow {
+	.featured_listings_carousel .prev.slick-arrow {
 		top: -70px;
 		left: 35%;
 	}
 
-	.latest_properties_carousel .next.slick-arrow {
+	.featured_listings_carousel .next.slick-arrow {
 		top: -70px;
 		right: 35%;
 	}
