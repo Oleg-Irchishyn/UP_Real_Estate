@@ -1,20 +1,51 @@
 
 // Extra header language and currency onclick show hidden elements
 
-let langDropdown = $(".uk .dropdown");
-let currencyDropdown = $(".usd .dropdown");
+let extraHeader = $(".extra_header");
+let langDropdown = $(".extra_item.language");
+let currencyDropdown = $(".extra_item.currency");
 let extraLang = $(".fr,.de");
 let extraCurrency = $(".eur");
 
+langDropdown.hover(function () {
+  extraLang.css("display", "block");
+  extraHeader.css("border-bottom-color", "transparent");
+},
+  function () {
+    extraLang.css("display", "none");
+    extraHeader.css("border-bottom-color", "#e7e4e4");
+  }
+)
 
-langDropdown.click(function () {
-  extraLang.toggle();
-});
+langDropdown.focus(function () {
+  extraLang.css("display", "block");
+  extraHeader.css("border-bottom-color", "transparent");
+},
+  function () {
+    extraLang.css("display", "none");
+    extraHeader.css("border-bottom-color", "#e7e4e4");
+  }
+)
 
-currencyDropdown.click(function () {
-  extraCurrency.toggle();
-});
+currencyDropdown.hover(function () {
+  extraCurrency.css("display", "block");
+  extraHeader.css("border-bottom-color", "transparent");
+},
+  function () {
+    extraCurrency.css("display", "none");
+    extraHeader.css("border-bottom-color", "#e7e4e4");
+  }
+)
 
+currencyDropdown.focus(function () {
+  extraCurrency.css("display", "block");
+  extraHeader.css("border-bottom-color", "transparent");
+},
+  function () {
+    extraCurrency.css("display", "none");
+    extraHeader.css("border-bottom-color", "#e7e4e4");
+  }
+)
 
 //Header mobile version + burger transform
 
@@ -94,8 +125,8 @@ $('.carousel').each(function (index) {
     slidesToScroll: 1,
     dots: false,
     arrows: true,
-    prevArrow: '<div class="prev"></div>',
-    nextArrow: '<div class="next"></div>',
+    prevArrow: '<div class="prev animated fast"></div>',
+    nextArrow: '<div class="next animated fast"></div>',
 
     responsive: [
       {
@@ -109,8 +140,8 @@ $('.carousel').each(function (index) {
           vertical: true,
           dots: false,
           arrows: true,
-          prevArrow: '<div class="prev"></div>',
-          nextArrow: '<div class="next"></div>',
+          prevArrow: '<div class="prev animated fast"></div>',
+          nextArrow: '<div class="next animated fast"></div>',
         }
       },
       {
@@ -123,8 +154,8 @@ $('.carousel').each(function (index) {
           infinite: true,
           dots: false,
           arrows: true,
-          prevArrow: '<div class="prev"></div>',
-          nextArrow: '<div class="next"></div>',
+          prevArrow: '<div class="prev animated fast"></div>',
+          nextArrow: '<div class="next animated fast"></div>',
         }
       },
       {
@@ -137,8 +168,8 @@ $('.carousel').each(function (index) {
           infinite: true,
           dots: false,
           arrows: true,
-          prevArrow: '<div class="prev"></div>',
-          nextArrow: '<div class="next"></div>'
+          prevArrow: '<div class="prev animated fast"></div>',
+          nextArrow: '<div class="next animated fast"></div>'
         }
       }
     ]
@@ -147,5 +178,51 @@ $('.carousel').each(function (index) {
 
 $(window).on('resize orientationchange', function () {
   $('.carousel').slick('resize');
+});
+
+// WOW Animations + Scroll animations on carousel items
+
+new WOW().init();
+
+var screen1 = $(".latest_properties_carousel .prev");
+var screen2 = $(".latest_properties_carousel .next");
+var screen3 = $(".latest_properties_carousel .carousel_item");
+var screen4 = $(".best_agents_carousel .prev");
+var screen5 = $(".best_agents_carousel .next");
+var screen6 = $(".best_agents_carousel .best_agents_item");
+var screen7 = $(".featured_listings_carousel .prev");
+var screen8 = $(".featured_listings_carousel .next");
+var screen9 = $(".featured_listings_carousel .carousel_item");
+
+
+var screens = [
+  screen1, screen2, screen3,
+  screen4, screen5, screen6,
+  screen7, screen8, screen9
+]
+
+
+$(document).ready(function () {
+
+  $(window).load(function () {
+    var windowHeight = $(window).height();
+
+    function scrollPoints() {
+      var scroll = $(window).scrollTop() + windowHeight;
+
+      for (let i = 0; i < screens.length; i++) {
+        if (scroll > screens[i].offset().top) {
+          screens[i].addClass("fadeInUp");
+        }
+      }
+    }
+
+    checkVisibleElements();
+
+    function checkVisibleElements() {
+      scrollPoints();
+      window.requestAnimationFrame(checkVisibleElements)
+    }
+  });
 });
 

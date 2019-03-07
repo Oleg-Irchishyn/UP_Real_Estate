@@ -26,6 +26,8 @@
 .features_gallery_container {
 	display: flex;
 	align-content: stretch;
+	box-sizing: content-box;
+	overflow: hidden;
 }
 
 .main_features_item {
@@ -48,6 +50,7 @@
 	flex-wrap: wrap;
 	align-content: stretch;
 	justify-content: space-between;
+	overflow: hidden;
 
 	.small_features_item {
 		width: 205px;

@@ -8,6 +8,7 @@
 .extra_header_inner {
 	display: flex;
 	justify-content: space-between;
+	overflow-x: visible !important;
 }
 
 .left_part {
@@ -82,6 +83,7 @@
 	padding: 13px 13px 13px 13px;
 	list-style-type: none;
 	-webkit-tap-highlight-color: transparent;
+	position: relative;
 
 	a {
 		text-decoration: none;
@@ -127,6 +129,9 @@
 
 .fr {
 	display: none;
+	position: absolute;
+	top: 50px;
+	z-index: 20;
 
 	.flag {
 		width: 16px;
@@ -152,6 +157,9 @@
 
 .de {
 	display: none;
+	position: absolute;
+	top: 80px;
+	z-index: 20;
 
 	.flag {
 		width: 16px;
@@ -215,6 +223,9 @@
 
 .eur {
 	display: none;
+	position: absolute;
+	top: 50px;
+	z-index: 20;
 }
 
 .extra_item.login {
