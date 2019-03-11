@@ -226,3 +226,42 @@ $(document).ready(function () {
   });
 });
 
+// Accordion tabs
+
+function showAccordionTabs() {
+
+  let firstTab = $(".first_item .accrodion_button");
+  let secondTab = $(".second_item .accrodion_button");
+  let thirdTab = $(".third_item .accrodion_button");
+
+  let firstTabicon = $(" .first_item .accrodion_button i");
+  let secondTabicon = $(".second_item .accrodion_button i");
+  let thirdTabicon = $(".third_item .accrodion_button i");
+
+  let firstTabcont = $(".first_item .listing_item_content");
+  let secondTabcont = $(".second_item .listing_item_content");
+  let thirdTabcont = $(".third_item .listing_item_content");
+
+  firstTab.click(function () {
+    firstTabicon.toggleClass("fa-minus");
+    firstTabicon.toggleClass("fa-plus");
+    firstTabcont.toggleClass("itemContentVisible");
+  });
+  secondTab.click(function () {
+    secondTabicon.toggleClass("fa-minus");
+    secondTabicon.toggleClass("fa-plus");
+    secondTabcont.toggleClass("itemContentVisible");
+  });
+  thirdTab.click(function () {
+    thirdTabicon.toggleClass("fa-minus");
+    thirdTabicon.toggleClass("fa-plus");
+    thirdTabcont.toggleClass("itemContentVisible");
+  });
+}
+
+showAccordionTabs();
+
+
+
+
+
