@@ -1,0 +1,122 @@
+﻿<div class="contacts">
+ <div class="contacts_inner container">
+  <div class="contacts_wrap">
+   <h2 class="contacts_title wow fadeInUp">
+    Our Contacts
+   </h2>
+   <h3 class="contacts_subtitle wow fadeInUp">
+   Duis a massa vitae diam maximus dictum sit amet nec purus. Morbi a nunc et sapien iaculis tincidunt nec hendrerit 
+   sapien. Cras convallis rhoncus mi eget rhoncus. In fringilla ligula mauris, sed volutpat tellus convallis vel.
+   </h3>
+   <div class="contacts_container">
+    <div class="contacts_container_item main_item wow slideInLeft">
+     <div id="googleMap">
+     </div>
+    </div>
+    <div class="contacts_container_item">
+     <ul class="contacts_listing">
+      <li class="contacts_listing_item wow slideInRight">
+       <img alt="location" src="img/content/location_image.png" width="60" height="60" class="location_img">
+       <span class="descr location_descr">
+        Beverly Hills, CA 90210 
+       <span>
+      </li>
+      <li class="contacts_listing_item wow slideInRight">
+       <img alt="open hours" src="img/content/hours_image.png" width="60" height="60" class="hours_img">
+       <span class="descr hours_descr">
+       Monday - Friday  
+       from 9:00 to 18:00
+       <span>
+      </li> 
+      <li class="contacts_listing_item wow slideInRight">
+       <img alt="phone" src="img/content/phone_image.png" width="60" height="60" class="phone_img">
+       <span class="descr phone_descr">
+        <a href="tel:435-234-9867" title="our phone">
+        435-234-9867
+        </a> 
+       <span>
+      </li> 
+      <li class="contacts_listing_item wow slideInRight">
+       <img alt="mail" src="img/content/mail_image.png" width="60" height="60" class="mail_img">
+       <span class="descr mail_descr">
+        <a href="mailto:info@example.com?subject=Our_Mail" title="Our Mail">
+         info@uprealestate.com
+        </a>
+       <span>
+      </li>  
+     </ul>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<!-- GOOGLE MAPS API SCRIPT-->
+
+ <script>
+function myMap() {
+  // The location of Dacha Center 
+  var upReal = { lat: 34.073685, lng: -118.400352 };
+
+  var mapProp = {
+    center: new google.maps.LatLng(34.073685, -118.400352),
+    zoom: 17,
+    disableDefaultUI: true
+  };
+
+  var customStyled = [{
+    featureType: "all",
+    elementType: "labels.icon",
+    stylers: [{
+      visibility: "on"
+    }]
+  },
+  {
+    "featureType": "landscape.man_made",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f7f7f7"
+      },
+      {
+        "visibility": "on"
+      }
+    ]
+  }
+  ];
+
+  //Map
+  var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+  map.setOptions({ draggable: true });
+  map.set('styles', customStyled);
+
+  var image = {
+    url: 'img/ui/marker.png',
+    scaledSize: new google.maps.Size(92, 92),
+}
+
+var contentString = '<div id="content"><span>Beverly Hills, CA 90210</span> <span>UP Real Estate HQ</span></div>'
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  //Marker
+  var marker = new google.maps.Marker({
+    position: upReal,
+    map: map,
+    icon: image,
+    optimized: false,  
+    title: 'UP Real Estate HQ'
+  });
+
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+}
+</script>
+
+
+
+

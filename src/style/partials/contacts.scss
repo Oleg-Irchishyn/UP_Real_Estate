@@ -1,0 +1,269 @@
+﻿.contacts {
+	background: #f8f8f8;
+	position: relative;
+}
+
+.contacts_title {
+	margin-top: 65px;
+	margin-bottom: 0px;
+	font-size: 36px;
+	color: $text-title;
+	font-family: $font-bold;
+	text-align: center;
+}
+
+.contacts_subtitle {
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 36px;
+	font-weight: normal;
+	font-family: $font-regular;
+	font-size: 16px;
+	line-height: 21px;
+	white-space: pre-line;
+}
+
+.contacts_container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 70px;
+}
+
+.contacts_container_item.main_item {
+	background: #fff;
+	padding: 7px;
+	align-self: flex-start;
+}
+
+// google maps styles
+
+#googleMap {
+	height: 380px;
+	width: 790px;
+	border: 1px solid #e7e4e4;
+}
+
+#content {
+	text-align: center;
+
+	span {
+		display: block;
+		font-family: $font-regular;
+		color: #b2d12d;
+		font-size: 16px;
+		line-height: 21px;
+	}
+}
+
+.contacts_container_item .contacts_listing {
+	list-style-type: none;
+	min-width: 250px;
+
+	li {
+		display: block;
+
+		img {
+			width: 60px;
+			height: 60px;
+			max-width: 100%;
+			display: inline-block;
+		}
+
+		.descr {
+			font-family: $font-regular;
+			font-size: 16px;
+			line-height: 21px;
+			color: $text-regular;
+			white-space: pre-line;
+			display: inline-block;
+			vertical-align: bottom;
+			max-height: 64px;
+			margin-left: 20px;
+
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+		}
+	}
+
+	li:first-of-type {
+		margin-bottom: 5px;
+	}
+}
+
+.location_descr {
+	padding-bottom: 3px;
+}
+
+.hours_descr {
+	padding-bottom: 13px;
+}
+
+.phone_descr {
+	padding-bottom: 20px;
+}
+
+.mail_descr {
+	padding-bottom: 20px;
+}
+
+// MEDIA QUERIES
+
+// 0 - 768
+
+@media screen and (max-width: 768px) {
+	.contacts_title {
+		margin-top: 50px;
+		margin-bottom: 0px;
+		font-size: 26px;
+		text-align: center;
+	}
+
+	.contacts_subtitle {
+		text-align: center;
+		margin-top: 20px;
+		margin-bottom: 36px;
+		white-space: normal;
+	}
+
+	.contacts_container {
+		display: flex;
+		justify-content: initial;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 70px;
+	}
+
+	.contacts_container_item.main_item {
+		background: #fff;
+		padding: 7px;
+		align-self: flex-start;
+		margin: auto;
+		order: 2;
+		margin-top: 40px;
+	}
+
+	// google maps styles
+
+	#googleMap {
+		height: 380px;
+		width: 280px;
+		border: 1px solid #e7e4e4;
+	}
+
+	#content {
+		text-align: center;
+
+		span {
+			display: block;
+			font-family: $font-regular;
+			color: #b2d12d;
+			font-size: 14px;
+			line-height: 16px;
+		}
+	}
+}
+
+// 769 - 992
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+	.contacts_title {
+		margin-top: 50px;
+		margin-bottom: 0px;
+		font-size: 26px;
+		text-align: center;
+	}
+
+	.contacts_subtitle {
+		text-align: center;
+		margin-top: 20px;
+		margin-bottom: 36px;
+		white-space: pre-line;
+	}
+
+	.contacts_container {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin-bottom: 70px;
+	}
+
+	.contacts_container_item.main_item {
+		background: #fff;
+		padding: 7px;
+		align-self: flex-start;
+	}
+
+	// google maps styles
+
+	#googleMap {
+		height: 380px;
+		width: 380px;
+		border: 1px solid #e7e4e4;
+	}
+
+	#content {
+		text-align: center;
+
+		span {
+			display: block;
+			font-family: $font-regular;
+			color: #b2d12d;
+			font-size: 16px;
+			line-height: 21px;
+		}
+	}
+}
+
+// 993 - 1199
+
+@media screen and (min-width: 993px) and (max-width: 1199px) {
+	.contacts_title {
+		margin-top: 50px;
+		margin-bottom: 0px;
+		font-size: 26px;
+		text-align: center;
+	}
+
+	.contacts_subtitle {
+		text-align: center;
+		margin-top: 20px;
+		margin-bottom: 36px;
+		white-space: pre-line;
+	}
+
+	.contacts_container {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin-bottom: 70px;
+	}
+
+	.contacts_container_item.main_item {
+		background: #fff;
+		padding: 7px;
+		align-self: flex-start;
+	}
+
+	// google maps styles
+
+	#googleMap {
+		height: 380px;
+		width: 500px;
+		border: 1px solid #e7e4e4;
+	}
+
+	#content {
+		text-align: center;
+
+		span {
+			display: block;
+			font-family: $font-regular;
+			color: #b2d12d;
+			font-size: 16px;
+			line-height: 21px;
+		}
+	}
+}
