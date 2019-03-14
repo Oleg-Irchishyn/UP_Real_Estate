@@ -102,6 +102,19 @@
 	}
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.small_features_item_container {
+		width: 55%;
+	}
+}
+
+@supports (-ms-accelerator: true) {
+	/* IE Edge 12+ CSS styles go here */
+	.small_features_item_container {
+		width: 55%;
+	}
+}
+
 // MEDIA QUERIES
 
 // 0 - 567

@@ -112,3 +112,41 @@ body {
 		max-width: 960px;
 	}
 }
+
+// IE 10+ and IE Edge class differences
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	/* IE Edge 10+ CSS styles go here */
+
+	.navigation_wrap {
+		animation: none !important;
+	}
+
+	.main_navigation .navigation_listing .navigation_item .subnav .subnav_item {
+		text-transform: none;
+	}
+
+	// Classes for accordion tabs IE 10+
+
+	.itemContentVisible {
+		max-height: 100%;
+	}
+}
+
+@supports (-ms-accelerator: true) {
+	/* IE Edge 12+ CSS styles go here */
+
+	.navigation_wrap {
+		animation: none !important;
+	}
+
+	.main_navigation .navigation_listing .navigation_item .subnav .subnav_item {
+		text-transform: none;
+	}
+
+	// Classes for accordion tabs IE Edge
+
+	.itemContentVisible {
+		max-height: 100%;
+	}
+}
