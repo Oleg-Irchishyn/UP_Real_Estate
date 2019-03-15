@@ -130,7 +130,7 @@ $('.carousel').each(function (index) {
 
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 769,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -262,7 +262,25 @@ function showAccordionTabs() {
 showAccordionTabs();
 
 
-// Google Maps 
+//ScrollTop Button init function
+
+function initScrollTop() {
+  let scrollContainer = $(".scroll_container");
+  let scrollBtn = $(".scroll_top_btn");
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      scrollContainer.fadeIn();
+    } else {
+      scrollContainer.fadeOut();
+    }
+  });
+  scrollBtn.on('click', function () {
+    $('html, body').animate({ scrollTop: 0 }, 800);
+    return false;
+  });
+}
+
+initScrollTop();
 
 
 

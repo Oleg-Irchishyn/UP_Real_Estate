@@ -1,0 +1,39 @@
+﻿.scroll_container {
+	position: fixed;
+	display: none;
+	width: 100%;
+	bottom: 54px;
+	z-index: 99999;
+
+	.scroll_container_inner {
+		display: flex;
+		justify-content: flex-end;
+
+		.scroll_top_btn {
+			position: relative;
+			cursor: pointer;
+			width: 36px;
+			height: 36px;
+			line-height: 34px;
+			background-color: #f26c1c;
+			color: #fff;
+			font-size: 20px;
+			text-align: center;
+			box-shadow: 22px 1px 22px 0px rgba(255, 255, 255, 0.3);
+			-webkit-tap-highlight-color: transparent;
+		}
+	}
+}
+
+//MEDIA QUERIES
+
+@media screen and (max-width: 992px) {
+	.scroll_container {
+		.scroll_container_inner {
+			.scroll_top_btn {
+				box-shadow: none;
+				margin-right: 15px;
+			}
+		}
+	}
+}
