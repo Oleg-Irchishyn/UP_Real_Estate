@@ -248,6 +248,14 @@ $(window).on('resize orientationchange', function () {
 
 new WOW().init();
 
+/* stop animation on small devices */
+if ($(window).width() <= 971) {
+  $(".wow").removeClass("wow");
+  $(".carousel_item").removeClass("animated");
+  $(".slick-arrow").removeClass("animated");
+  $(".best_agents_item").removeClass("animated");
+}
+
 var screen1 = $(".latest_properties_carousel .prev");
 var screen2 = $(".latest_properties_carousel .next");
 var screen3 = $(".latest_properties_carousel .carousel_item");
