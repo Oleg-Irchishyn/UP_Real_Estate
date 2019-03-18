@@ -14,6 +14,7 @@
 .left_part {
 	display: flex;
 	position: relative;
+	will-change: transform, opacity;
 }
 
 .extra_item.sociable {
@@ -60,6 +61,7 @@
 .right_part {
 	position: relative;
 	display: flex;
+	will-change: transform, opacity;
 }
 
 .extra_item.event {
@@ -132,8 +134,8 @@
 	position: absolute;
 	top: 50px;
 	z-index: 20;
-  width: 120px;
-  height: 50px;
+	width: 120px;
+	height: 50px;
 
 	.flag {
 		width: 16px;
@@ -162,8 +164,8 @@
 	position: absolute;
 	top: 80px;
 	z-index: 20;
-  width: 120px;
-  height: 50px;
+	width: 120px;
+	height: 50px;
 
 	.flag {
 		width: 16px;

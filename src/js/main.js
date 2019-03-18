@@ -114,7 +114,10 @@ starFavicon.each(function (index) {
 
 // Carousels 
 
-$('.carousel').each(function (index) {
+let carousel = $(".carousel");
+let partnersCarousel = $(".partners_carousel");
+
+carousel.each(function (index) {
   $(this).slick({
     infinite: true,
     speed: 300,
@@ -176,8 +179,69 @@ $('.carousel').each(function (index) {
   });
 });
 
+partnersCarousel.slick({
+  infinite: true,
+  speed: 300,
+  autoplay: true,
+  autoplaySpeed: 10000,
+  slidesToShow: 6,
+  pauseOnHover: true,
+  slidesToScroll: 1,
+  dots: false,
+  arrows: true,
+  prevArrow: '<div class="prev animated fast"></div>',
+  nextArrow: '<div class="next animated fast"></div>',
+
+  responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        infinite: true,
+        vertical: true,
+        dots: false,
+        arrows: true,
+        prevArrow: '<div class="prev animated fast"></div>',
+        nextArrow: '<div class="next animated fast"></div>',
+      }
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        infinite: true,
+        dots: false,
+        arrows: true,
+        prevArrow: '<div class="prev animated fast"></div>',
+        nextArrow: '<div class="next animated fast"></div>',
+      }
+    },
+    {
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        autoplay: false,
+        autoplaySpeed: 10000,
+        infinite: true,
+        dots: false,
+        arrows: true,
+        prevArrow: '<div class="prev animated fast"></div>',
+        nextArrow: '<div class="next animated fast"></div>'
+      }
+    }
+  ]
+});
+
 $(window).on('resize orientationchange', function () {
-  $('.carousel').slick('resize');
+  carousel.slick('resize');
+  partnersCarousel.slick('resize');
 });
 
 // WOW Animations + Scroll animations on carousel items
@@ -193,12 +257,16 @@ var screen6 = $(".best_agents_carousel .best_agents_item");
 var screen7 = $(".featured_listings_carousel .prev");
 var screen8 = $(".featured_listings_carousel .next");
 var screen9 = $(".featured_listings_carousel .carousel_item");
+var screen10 = $(".partners_carousel .prev");
+var screen11 = $(".partners_carousel .next");
+var screen12 = $(".partners_carousel .carousel_item");
 
 
 var screens = [
   screen1, screen2, screen3,
   screen4, screen5, screen6,
-  screen7, screen8, screen9
+  screen7, screen8, screen9,
+  screen12
 ]
 
 
@@ -281,8 +349,6 @@ function initScrollTop() {
 }
 
 initScrollTop();
-
-
 
 
 

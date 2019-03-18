@@ -13,6 +13,7 @@
 	position: relative;
 	margin-top: 127px;
 	align-self: flex-start;
+	will-change: transform, opacity;
 
 	.banner_entry {
 		text-align: left;
@@ -59,11 +60,13 @@
 	font-size: 22px;
 	background: #353f45;
 	align-self: flex-start;
+	will-change: transform, opacity;
 }
 
 .main_filter {
 	position: relative;
 	background: #f0f0f0;
+	will-change: transform, opacity;
 
 	.main_filter_form_wrap {
 		box-sizing: border-box;
@@ -317,6 +320,7 @@
 	.main_filter_mobile_submit.btn {
 		@include btn;
 
+		will-change: transform, opacity;
 		margin-top: 25px;
 		margin-bottom: 22px;
 		display: inline-block;

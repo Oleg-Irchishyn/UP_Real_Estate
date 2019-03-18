@@ -21,6 +21,7 @@
 		font-size: 20px;
 		line-height: 21px;
 		color: #fff;
+		will-change: transform, opacity;
 	}
 
 	.item_logo {
@@ -28,6 +29,7 @@
 		width: 138px;
 		height: 64px;
 		margin-top: 30px;
+		will-change: transform, opacity;
 
 		img {
 			width: 100%;
@@ -43,12 +45,14 @@
 		font-size: 15px;
 		line-height: 21px;
 		color: #fff;
+		will-change: transform, opacity;
 	}
 }
 
 .footer_item .item_sociable.sociable_listing {
 	list-style-type: none;
 	margin-top: 25px;
+	will-change: transform, opacity;
 
 	.sociable_item {
 		display: inline-block;

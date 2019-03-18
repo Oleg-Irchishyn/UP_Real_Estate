@@ -1,4 +1,8 @@
-﻿.header_wrap {
+﻿.header {
+	will-change: transform, opacity;
+}
+
+.header_wrap {
 	display: flex;
 	position: relative;
 

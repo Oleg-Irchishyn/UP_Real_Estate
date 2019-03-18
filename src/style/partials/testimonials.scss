@@ -1,5 +1,5 @@
 ﻿.testimonials {
-  margin-bottom: 25px;
+	margin-bottom: 25px;
 }
 
 .testimonials_wrap {
@@ -14,6 +14,7 @@
 	color: $text-title;
 	font-family: $font-bold;
 	text-align: left;
+	will-change: transform, opacity;
 }
 
 .testimonials_services_listing {
@@ -33,6 +34,7 @@
 		border: 1px solid #e7e4e4;
 		background: #fff;
 		display: flex;
+		will-change: transform, opacity;
 
 		.accrodion_button {
 			border-right: 1px solid #e7e4e4;
@@ -81,6 +83,7 @@
 		font-family: $font-regular;
 		font-size: 15px;
 		line-height: 1.4em;
+		will-change: transform, opacity;
 	}
 }
 
@@ -104,6 +107,7 @@
 	font-family: $font-bold;
 	text-align: left;
 	white-space: nowrap;
+	will-change: transform, opacity;
 }
 
 .testimonials_agents_reviews {
@@ -122,6 +126,7 @@
 			max-height: 62px;
 			padding: 2px;
 			margin-right: 30px;
+			will-change: transform, opacity;
 
 			img {
 				display: block;
@@ -145,6 +150,7 @@
 		color: $text-title;
 		display: block;
 		margin-bottom: 0px;
+		will-change: transform, opacity;
 	}
 
 	.descr_text {
@@ -154,6 +160,7 @@
 		line-height: 1.4em;
 		margin-top: 0px;
 		margin-bottom: 30px;
+		will-change: transform, opacity;
 	}
 }
 

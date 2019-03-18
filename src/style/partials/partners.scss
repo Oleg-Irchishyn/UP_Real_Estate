@@ -1,0 +1,268 @@
+﻿.partners {
+	margin-bottom: 70px;
+}
+
+.partners_wrap {
+	position: relative;
+}
+
+.partners_title {
+	text-align: center;
+	margin-top: 65px;
+	margin-bottom: 24px;
+	font-size: 36px;
+	color: $text-title;
+	font-family: $font-bold;
+	text-align: center;
+	font-weight: normal;
+	will-change: transform, opacity;
+}
+
+.partners_carousel_title {
+	text-align: center;
+	font-family: $font-regular;
+	font-weight: normal;
+	color: $text-regular;
+	line-height: 1.35;
+	font-size: 15px;
+	margin-bottom: 45px;
+	will-change: transform, opacity;
+}
+
+.partners_carousel {
+	position: relative;
+	width: 1170px !important;
+	margin: auto;
+	display: flex;
+	cursor: pointer;
+
+	.carousel_item {
+		width: 170px;
+		margin-left: 10px;
+		text-align: center;
+		will-change: transform, opacity;
+
+		.preview {
+			position: relative;
+			cursor: pointer;
+
+			&:hover,
+			&:focus {
+				transition: .4s;
+
+				img {
+					opacity: 1;
+				}
+			}
+
+			img {
+				width: 157px;
+				height: 102px;
+				max-width: 100%;
+				opacity: 0.7;
+			}
+		}
+	}
+}
+
+/* slick slider parent*/
+
+.partners_wrap .slick-list {
+	margin: 0 -15px;
+}
+
+.partners_wrap .slick-slide {
+	margin: 0 15px;
+	width: 170px !important;
+}
+
+.partners_carousel .prev.slick-arrow {
+	background: #f26c1c;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top: -70px;
+	left: 41%;
+	border-radius: 100%;
+	text-align: center;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+	&:focus,
+	&:hover {
+		background: #353f45;
+	}
+}
+
+.partners_carousel .next.slick-arrow {
+	height: 30px;
+	width: 30px;
+	background: #f26c1c;
+	position: absolute;
+	top: -70px;
+	right: 41%;
+	border-radius: 100%;
+	text-align: center;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+	&:focus,
+	&:hover {
+		background: #353f45;
+	}
+}
+
+.prev.slick-arrow:after {
+	content: "\003C";
+	color: white;
+	position: relative;
+	top: 5%;
+	font-size: 20px;
+}
+
+.next.slick-arrow:before {
+	content: "\003E";
+	position: relative;
+	top: 5%;
+	color: white;
+	font-size: 20px;
+}
+
+// MEDIA QUERIES
+
+// 0 - 768
+
+@media screen and (max-width: 768px) {
+	.partners {
+		margin-bottom: 70px;
+	}
+
+	.partners_wrap {
+		position: relative;
+	}
+
+	.partners_title {
+		margin-top: 50px;
+		margin-bottom: 24px;
+		font-size: 26px;
+	}
+
+	.partners_carousel {
+		position: relative;
+		width: 320px !important;
+
+		.carousel_item {
+			width: 170px;
+			margin: 0;
+		}
+	}
+
+	/* slick slider parent*/
+
+	.partners_wrap .slick-slide {
+		margin: 0 95px;
+		width: 170px !important;
+	}
+
+	.partners_carousel .prev.slick-arrow {
+		top: -70px;
+		left: 21%;
+	}
+
+	.partners_carousel .next.slick-arrow {
+		top: -70px;
+		right: 21%;
+	}
+}
+
+// 769 - 992
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+	.partners {
+		margin-bottom: 0px;
+	}
+
+	.partners_wrap {
+		position: relative;
+	}
+
+	.partners_title {
+		margin-top: 50px;
+		margin-bottom: 24px;
+		font-size: 26px;
+	}
+
+	.partners_carousel {
+		position: relative;
+		width: 572px !important;
+
+		.carousel_item {
+			width: 170px;
+			margin: 0;
+		}
+	}
+
+	/* slick slider parent*/
+
+	.partners_wrap .slick-list {
+		margin: 0 -10px;
+	}
+
+	.partners_wrap .slick-slide {
+		margin: 0 15px;
+		width: 170px !important;
+	}
+
+	.partners_carousel .prev.slick-arrow {
+		top: -70px;
+		left: 31%;
+	}
+
+	.partners_carousel .next.slick-arrow {
+		top: -70px;
+		right: 31%;
+	}
+}
+
+// 993 - 1199
+
+@media screen and (min-width: 993px) and (max-width: 1199px) {
+	.partners_wrap {
+		position: relative;
+	}
+
+	.partners_title {
+		margin-top: 50px;
+		margin-bottom: 24px;
+		font-size: 26px;
+	}
+
+	.partners_carousel {
+		position: relative;
+		width: 900px !important;
+
+		.carousel_item {
+			width: 170px;
+			margin-left: 0px;
+		}
+	}
+
+	/* slick slider parent*/
+
+	.partners_wrap .slick-list {
+		margin: 0 -20px;
+	}
+
+	.partners_wrap .slick-slide {
+		margin: 0 9px;
+		width: 170px !important;
+	}
+
+	.partners_carousel .prev.slick-arrow {
+		top: -70px;
+		left: 35%;
+	}
+
+	.partners_carousel .next.slick-arrow {
+		top: -70px;
+		right: 35%;
+	}
+}

@@ -11,6 +11,7 @@
 	font-family: $font-bold;
 	text-align: center;
 	font-weight: normal;
+	will-change: transform, opacity;
 }
 
 .features_gallery_container_title {
@@ -21,6 +22,7 @@
 	line-height: 1.35;
 	font-size: 15px;
 	margin-bottom: 45px;
+	will-change: transform, opacity;
 }
 
 .features_gallery_container {
@@ -66,6 +68,14 @@
 			}
 		}
 	}
+}
+
+.main_features_item .preview {
+	will-change: transform, opacity;
+}
+
+.small_features_item .preview {
+	will-change: transform, opacity;
 }
 
 .small_features_item_container .small_features_item {

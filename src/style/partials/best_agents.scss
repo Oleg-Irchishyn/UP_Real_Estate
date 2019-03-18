@@ -18,6 +18,7 @@
 	font-family: $font-bold;
 	text-align: center;
 	font-weight: normal;
+	will-change: transform, opacity;
 }
 
 .best_agents_carousel_title {
@@ -28,6 +29,7 @@
 	line-height: 1.35;
 	font-size: 15px;
 	margin-bottom: 45px;
+	will-change: transform, opacity;
 }
 
 .best_agents_carousel {
@@ -45,6 +47,7 @@
 		background-color: #fff;
 		margin-left: 10px;
 		margin-top: 65px;
+		will-change: transform, opacity;
 	}
 }
 
